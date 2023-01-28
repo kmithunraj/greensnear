@@ -1,0 +1,605 @@
+/*                    ........HEADER........                 */
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    font-family: "quicksand", sans-serif;
+    display: grid;
+}
+
+#page-logo a{
+    color: coral;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-family: "oleo script";
+    text-shadow: 1px 1px 2px black;
+    padding: 10px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    position: relative;
+    align-items: center;
+    background-color: rgb(9, 191, 9);
+}
+
+header ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0 35px 0 0;
+}
+
+header ul li{
+    margin-left: 20px;
+}
+
+
+header ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: white;
+    padding: 15px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+header ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+#header-feedback a{
+    background-color: coral;
+}
+
+#header-feedback a:hover{
+    cursor: pointer;
+    background-color: rgb(232, 88, 36);
+    color: white;
+}
+
+
+/*                    ........Menu-btn........                 */
+
+.menu-btn{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.menu-btn span{
+    width: 100%;
+    height: 3px;
+    background-color: white;
+}
+
+
+/*                    ........SIDE-DRAWER........                 */
+
+#side-drawer{
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s ;
+    padding-top: 60px;
+    display: none;
+}
+
+#side-drawer:target{
+    display: block;
+}
+
+#side-drawer ul li{
+    list-style: none;
+}
+
+#side-drawer ul li a {
+    padding: 0 0 15px 0;
+    text-decoration: none;
+    font-size: 25px;
+    color: #bdbbbb;
+    display: block;
+    transition: 0.3s;
+}
+
+#side-drawer ul li a:hover{
+    color: white;
+}
+
+
+.close {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+  }
+
+  .close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: rgb(238, 234, 234);
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+
+
+/*                    ........MAIN........                 */
+
+#hero{
+    background-image: url("https://i.ibb.co/wcr5f5V/1jpeg.jpg");
+    width: 100%;
+    height: 600px;
+    background-position: center;
+    background-size: cover;
+    margin-top: 5px;
+
+}
+
+/**#hero{
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(200px);
+    -webkit-backdrop-filter: blur(200px);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+}**/
+
+#hero-content{
+    width: 80%;
+    background-color: rgba(51, 47, 47, 0.8);
+    box-shadow: 2px 4px 8px rgb(68, 67, 67);
+    border-radius: 10px;
+    top: 180px;
+    margin: 0 auto;
+    padding: 100px 0;
+    position: relative;
+    text-align: center;
+    justify-content: space-between;
+}
+
+
+#hero-content a{
+    color: white;
+    background-color: rgb(9, 191, 9);
+    padding: 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    margin: 60px;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 2px 4px 8px rgb(60, 60, 60);
+}
+
+
+#hero-content a:hover{
+    background-color: green;
+}
+
+#hero-content h1{
+    color: white;
+    font-family: "Raleway";
+    font-size: 22px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+#hero-content p{
+    color: white;
+    font-size: 18px;
+    font-weight: 300px;
+    margin-bottom: 40px;
+}
+
+
+
+
+
+
+
+/*                    ........FEATURES........                 */
+
+#features h1{
+    color: rgb(9, 191, 9);
+    font-size: 48px;
+    text-align: center;
+    text-shadow: 2px 2px 2px rgb(55, 55, 55);
+}
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    grid-gap: 40px;
+    padding: 20px;
+}
+
+.image{
+    position: relative;
+    clip-path: polygon(0 0,100% 0,100% 85%,0 100%);
+}
+
+.image img{
+    width: 100%;
+    display: block;
+    border-radius: 20px 20px 0 0;
+}
+
+.content{
+    background-color: rgb(142, 142, 142);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.18);
+    padding: 5px;
+}
+
+.text h3{
+    color: white;
+    text-align: center;
+    font-size: 24px;
+}
+
+.text p{
+    color: white;
+    text-align: center;
+    font-size: 18px;
+}
+
+
+/*                    ........ABOUT US........                 */
+
+
+#about h1{
+    color: rgb(9, 191, 9);
+    font-size: 48px;
+    text-align: center;
+    text-shadow: 2px 2px 2px rgb(55, 55, 55);
+}
+
+#details{
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    align-items: center;
+    background-color: rgb(245, 245, 245);
+}
+
+#details img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    padding: 40px;
+}
+
+#details p{
+    font-size: 24px;
+    padding-right: 20px;
+}
+
+
+/*                    ........TESTIMONIALS........                 */
+
+
+#testimonials h1{
+    color: rgb(9, 191, 9);
+    font-size: 48px;
+    text-align: center;
+    text-shadow: 2px 2px 2px rgb(55, 55, 55);
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.box .icon svg{
+    padding: 6px;
+}
+
+.box {
+    position: relative;
+    width: calc(400px - 30px);
+    height: calc(350px - 20px);
+    background: rgb(245, 245, 245);
+    float: left;
+    margin: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.box .icon{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    color: white;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px auto;
+    border-radius: 50%;
+}
+
+.box .text h3{
+    color: #111;
+}
+
+.box .text p{
+    color: #111;
+}
+
+
+
+
+/*                    ........CONTACT US........                 */
+
+#contact h1{
+    color: rgb(9, 191, 9);
+    font-size: 48px;
+    text-align: center;
+    text-shadow: 2px 2px 2px rgb(55, 55, 55);
+}
+
+
+
+form{
+    width: 450px;
+    margin: 70px auto;
+    background-color: rgb(181, 181, 181);
+    padding: 48px;
+    border-radius: 10px;
+}
+
+label{
+    margin-bottom: 8px;
+    display: block;
+    color: rgb(46, 45, 45);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+input{
+    width: 100%;
+    display: block;
+    margin-bottom: 32px;
+    box-sizing: border-box;
+    font: inherit;
+    padding: 4px;
+    border: 1px solid rgb(177, 177, 177);
+    color: rgb(45, 45, 45);
+    border-radius: 6px;
+}
+
+#form p{
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(46, 45, 45);
+}
+
+#usersuggestions{
+    padding: 24px 0;
+}
+
+
+input:focus{
+    border-color: rgb(32, 5, 63);
+}
+
+button {
+    padding: 8px 12px;
+    border-radius: 10px;
+    margin-top: 32px;
+    background-color: rgb(9, 191, 9);
+    border: 1px solid rgb(9, 191, 9);
+    color: white;
+    font-size: 24px;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover{
+    background-color: rgb(5, 144, 5);
+    cursor: pointer;
+}
+
+
+/*                    ........RESPONSIVE FOR 924px........                 */
+
+
+@media screen and (max-width: 924px) {
+    
+    #page-logo a{
+        font-size: 25px;
+    }
+
+    header ul li a{
+        font-size: 15px;
+    }
+
+    #hero{
+        height: 500px;
+    }
+
+    #hero-content{
+        top: 100px;
+        padding: 50px;
+        width: 80%;
+    }
+
+    #hero-content a{
+        padding: 10px;
+        font-size: 20px;
+    }
+ 
+}
+
+
+@media screen and (min-width: 801px){
+    .menu-btn{
+        display: none;
+    }
+}
+
+
+
+
+
+/*                    ........RESPONSIVE FOR 800px........                 */
+
+
+@media screen and (max-width: 800px) {
+    
+    header nav{
+        display: none;
+    }
+
+    .content{
+        margin: 50px;
+    }
+    
+
+}
+
+
+/*                    ........RESPONSIVE FOR 860px........                 */
+
+@media screen and (max-width: 860px) {
+
+    .container{
+        margin: 0 200px;
+    }
+    
+}
+
+
+
+/*                    ........RESPONSIVE FOR 576px........                 */
+
+
+@media screen and (max-width: 576px){
+
+    form{
+        width: 400px;
+    }
+
+}
+
+
+
+
+/*                    ........RESPONSIVE FOR 500px........                 */
+
+@media screen and (max-width: 500px) {
+    
+    #hero-content{
+        padding: 20px;
+    }
+
+    #hero-content a {
+        padding: 10px;
+        font-size: 18px;
+        margin: 10px;
+    }
+
+    form{
+        width: 360px;
+        padding: 20px;
+    }
+
+
+}
+
+
+
+
+/*                    ........FOOTER........                 */
+
+#footer{
+    background: linear-gradient(70deg,rgb(24,24,24),rgb(25,29,29));
+    padding: 36px 0;
+    margin-top: 30px;
+}
+
+#footer h2{
+    color: white;
+    text-align: center;
+}
+
+#footer h3{
+    color: white;
+    text-align: center;
+}
+
+#footer p{
+    color: white;
+    text-align: center;
+}
+
+
+
+
+
+
+/*                            ........SELLER PAGE........                       */
+
+
+#title{
+    display: flex;
+    justify-content: space-around;
+    background-color: grey;
+    padding: 20px;
+    margin: 30px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+#one h3{
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+#one p{
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+#current h2{
+    font-size: 40px;
+    padding: 30px;
+    color: rgb(9, 191, 9);
+    text-shadow: 2px 2px 2px rgb(55, 55, 55);
+}
+
+
